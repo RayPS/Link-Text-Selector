@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+
+// Response Settings to JS
+safari.application.addEventListener("message",function (Event) {
+    var settings = {}
+    settings.key = safari.extension.settings.getItem("triggerKey")
+    settings.delay = safari.extension.settings.getItem("resetDelay")
+    safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("response",settings);
+},false);
+
+</script>
+</body>
+</html>
