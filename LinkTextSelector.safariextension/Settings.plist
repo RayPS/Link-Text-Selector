@@ -3,72 +3,38 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>DefaultValue</key>
-		<string>shiftKey</string>
-		<key>Key</key>
-		<string>triggerKey</string>
 		<key>Title</key>
-		<string>Trigger Key</string>
+		<string>Hover on a link and press</string>
+		<key>Type</key>
+		<string>Group</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>Shift</string>
+		<key>Key</key>
+		<string>hotKey</string>
+		<key>Title</key>
+		<string>the key</string>
 		<key>Titles</key>
 		<array>
 			<string>⇧ Shift</string>
-			<string>⌃ Ctrl</string>
-			<string>⌥ Alt (Option)</string>
+			<string>⌃ Control</string>
+			<string>⌥ Option (Alt)</string>
 			<string>⌘ Command</string>
 		</array>
 		<key>Type</key>
 		<string>RadioButtons</string>
 		<key>Values</key>
 		<array>
-			<string>shiftKey</string>
-			<string>ctrlKey</string>
-			<string>altKey</string>
-			<string>metaKey</string>
+			<string>Shift</string>
+			<string>Control</string>
+			<string>Alt</string>
+			<string>Meta</string>
 		</array>
-	</dict>
-	<dict>
-		<key>DefaultValue</key>
-		<real>5000</real>
-		<key>Key</key>
-		<string>resetDelay</string>
-		<key>Title</key>
-		<string>Reset Delay</string>
-		<key>Titles</key>
-		<array>
-			<string>1 Second</string>
-			<string>2 Seconds</string>
-			<string>3 Seconds</string>
-			<string>4 Seconds</string>
-			<string>5 Seconds</string>
-			<string>6 Seconds</string>
-			<string>7 Seconds</string>
-			<string>8 Seconds</string>
-			<string>9 Seconds</string>
-			<string>10 Seconds</string>
-		</array>
-		<key>Type</key>
-		<string>PopUpButton</string>
-		<key>Values</key>
-		<array>
-			<real>1000</real>
-			<real>2000</real>
-			<real>3000</real>
-			<real>4000</real>
-			<real>5000</real>
-			<real>6000</real>
-			<real>7000</real>
-			<real>8000</real>
-			<real>9000</real>
-			<real>10000</real>
-		</array>
-	</dict>
-	<dict>
-		<key>Type</key>
-		<string>Separator</string>
 	</dict>
 	<dict>
 		<key>Title</key>
-		<string>Be sure to refresh pages after changed</string>
+		<string>Then refresh the page to take affect.</string>
 		<key>Type</key>
 		<string>Group</string>
 	</dict>

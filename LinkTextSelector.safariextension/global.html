@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-<script>
+<html><body><script type="text/javascript">
 
 // Response Settings to JS
-safari.application.addEventListener("message",function (Event) {
-    var settings = {}
-    settings.key = safari.extension.settings.getItem("triggerKey")
-    settings.delay = safari.extension.settings.getItem("resetDelay")
-    safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("response",settings);
-},false);
+safari.application.addEventListener("message", function(Event) {
+    if (Event.name == "askForHotKey") {
+        var hotKey = safari.extension.settings.getItem("hotKey")
+        safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("answerForHotKey", hotKey);
+    }
+},false)
 
-</script>
-</body>
-</html>
+safari.extension.settings.addEventListener("change", function(Event){
+    if (Event.key == "hotKey") {
+        var newKey = Event.newValue
+        safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("changedForHotKey", newKey);
+    }
+}, false)
+
+</script></body></html>

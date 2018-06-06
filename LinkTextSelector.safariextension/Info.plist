@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>RayPS</string>
+	<string>rayps.com</string>
 	<key>Builder Version</key>
-	<string>10600.7.12</string>
+	<string>13605.1.33.1.4</string>
 	<key>CFBundleDisplayName</key>
 	<string>Link Text Selector</string>
 	<key>CFBundleIdentifier</key>
@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>2.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2.0</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
@@ -27,13 +27,12 @@
 		<dict>
 			<key>End</key>
 			<array>
-				<string>jquery-2.1.1.min.js</string>
 				<string>inject.js</string>
 			</array>
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Select text from hyperlink title.</string>
+	<string>Select text from hyperlinks.</string>
 	<key>DeveloperIdentifier</key>
 	<string>MGAF98TG33</string>
 	<key>ExtensionInfoDictionaryVersion</key>
@@ -49,7 +48,7 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://rayps.qiniudn.com/Safari_Extension_Update.plist</string>
+	<string>https://raw.githubusercontent.com/RayPS/Link-Text-Selector/master/manifest.plist</string>
 	<key>Website</key>
 	<string>http://lab.rayps.com/lts/</string>
 </dict>

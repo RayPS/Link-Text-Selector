@@ -1,9 +1,15 @@
 #### Link Text Selector
 
-Select text from hyperlinks.
-Simply hover the mouse cursor over the link and press the [Shift] key to trigger.
-The link will reset after 5 seconds automatically.
+Safari Extension: Select text from hyperlinks.
 
-<http://lab.rayps.com/lts/>
+Download from the latest [Release](../../releases) or [(in review...)](#)
 
-![](http://lab.rayps.com/lts/image.png)
+![](image.png)
+
+#### See in action:
+![](preview.gif)
+
+
+#### Tip:
+- Double click to select a word
+- Tripple click to select a paragraph

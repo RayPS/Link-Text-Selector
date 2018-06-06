@@ -1,93 +1,95 @@
 if (window.top === window){
+  // Not an iframe
 
-var settings = {}
+  var hotKey = undefined
 
-safari.self.tab.dispatchMessage("request");
+  safari.self.tab.dispatchMessage("askForHotKey");
 
-safari.self.addEventListener("message",function (Event) {
-  settings = Event.message
-}, false);
+  safari.self.addEventListener("message", function (Event) {
+    if (Event.name == "answerForHotKey") {
+      hotKey = Event.message || "Shift"
+    }
+    if (Event.name == "changedForHotKey") {
+      // hotKey = Event.message
+      // console.log("hotkey changed to " + hotKey)
+    }
+  }, false)
+  
 
-jQuery.fn.extend({
-  renameAttr: function( name, newName, removeData ) {
-    var val;
-    return this.each(function() {
-      val = jQuery.attr( this, name );
-      jQuery.attr( this, newName, val );
-      jQuery.removeAttr( this, name );
-      // remove original data
-      if (removeData){
-        jQuery.removeData( this, name.replace('data-','') );
+  document.addEventListener('keyup', (event) => {
+    if (event.key == hotKey) {
+      let target = document.querySelector("a:hover")
+      if (target) {
+        let box = makeBoxElement(target)
+        document.body.appendChild(box)
+        box.show()
       }
-    });
-  }
-});
-
-
-$("<style>")
-    .prop("type", "text/css")
-    .html("\
-    .lts-highlighted {\
-        transition: all 0.2s ease-out;\
-        color: black;\
-        background-color: #e1f4ff;\
-        box-shadow: 0 0 0 3px #65C0FD;\
-        border-radius: 3px;\
-        padding: 2px;\
-        cursor: text;\
-    }")
-    .appendTo("head");
-
-
-function Triggerkey (event){
-  switch(settings.key){
-  case "shiftKey":
-    return event.shiftKey;
-    break;
-  case "ctrlKey":
-    return event.ctrlKey;
-    break;
-  case "altKey":
-    return event.altKey;
-    break;
-  case "metaKey":
-    return event.metaKey;
-    break;
-  default:
-    return event.shiftKey;
-    break;
-  }
+      console.log(hotKey);
+      
+    }
+  })
 }
 
 
-$(document).keydown(function (event) {
-    if (Triggerkey(event)) {
-        var target = $("a:hover")
+function makeBoxElement(element) {    
+  let offset = 8
+  
+  let div = document.createElement("div")
+  div.innerHTML = element.innerHTML
+  
+  let rect = element.getBoundingClientRect()
+  let expandedBounding = {
+    left: rect.left - offset + window.scrollX,
+    top: rect.top - offset + window.scrollY,
+    width: rect.width + offset * 2,
+    height: rect.height + offset * 2
+  }
+  for (let key in expandedBounding) {
+    expandedBounding[key] += "px"
+  }
 
-        window.setTimeout(trigger,0)
-        window.setTimeout(reset,settings.delay)
+  let computedStyle = window.getComputedStyle(element)
+  
+  let style = {
+    "position": "absolute",
+    "z-index": 2147483647, // Literally the maximum number LOL..
+    "background-color": "white",
+    "font": computedStyle.font,
+    "color": "black",
+    "padding-left": offset + parseInt(computedStyle.paddingLeft) + "px",
+    "padding-top": offset + parseInt(computedStyle.paddingTop) + "px",
+    "box-sizing": "border-box",
+    "border-radius": "4px",
+    "box-shadow": "0px 0px 0px 1px rgba(0 ,0, 0, 0.1), 0px 4px 8px rgba(0 ,0, 0, 0.25), 0px 8px 16px rgba(0 ,0, 0, 0.25)",
+    "cursor": "text",
+    "transition": "transform 0.1s ease-out, opacity 0.1s ease-in",
+    "transform": "scale(1)"
+  }
+  style = Object.assign(style, expandedBounding)
 
-        function trigger() {
-            target.renameAttr("href", "href-origin")
-            target.addClass('lts-highlighted')
-        }
+  for (let key in style) {
+    div.style.setProperty(key, style[key], "important")
+  }
 
-        function reset() {
-            target.renameAttr("href-origin", "href")
-            target.removeClass('lts-highlighted')
-        }
-    }
-})
+  div.querySelectorAll("*").forEach( x => {
+    x.style.cursor = "text"
+  })
 
+  div.show = function(){
+    setTimeout(function(){
+      div.style.transform = "scale(1.1)"
+      setTimeout(function(){
+        div.style.transform = "scale(1)"
+      },100)
+    },50)
+  }
 
+  div.addEventListener("mouseleave", function(){
+    div.style.opacity = 0
+    setTimeout(function(){
+      div.parentNode.removeChild(div)
+    },100)
+  })
 
-
-
-
-
-
-
-
-
-
+  return div
 }
