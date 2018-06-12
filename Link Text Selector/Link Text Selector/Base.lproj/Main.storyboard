@@ -132,14 +132,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box fixedFrame="YES" title="Hot Key" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-Qc-Tk3">
-                                <rect key="frame" x="263" y="29" width="200" height="171"/>
+                                <rect key="frame" x="267" y="43" width="200" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="g9h-Gu-3cd">
-                                    <rect key="frame" x="2" y="2" width="196" height="154"/>
+                                    <rect key="frame" x="2" y="2" width="196" height="144"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEC-8X-Ccv">
-                                            <rect key="frame" x="20" y="20" width="107" height="112"/>
+                                            <rect key="frame" x="16" y="16" width="107" height="112"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rhG-yV-rfG">
@@ -198,16 +198,17 @@
                                         </stackView>
                                     </subviews>
                                 </view>
+                                <font key="titleFont" metaFont="toolTip"/>
                             </box>
                             <box fixedFrame="YES" title="Usage" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-Xy-wWf">
-                                <rect key="frame" x="17" y="29" width="244" height="171"/>
+                                <rect key="frame" x="13" y="43" width="251" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="CbQ-KE-3IJ">
-                                    <rect key="frame" x="2" y="2" width="240" height="154"/>
+                                    <rect key="frame" x="2" y="2" width="247" height="144"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aud-kW-Xa3">
-                                            <rect key="frame" x="18" y="20" width="204" height="114"/>
+                                            <rect key="frame" x="14" y="14" width="219" height="114"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="0CT-na-LPD">
                                                 <font key="font" metaFont="system"/>
@@ -220,10 +221,31 @@ If you changed the hot key setting you need to refresh web pages to take affects
                                         </textField>
                                     </subviews>
                                 </view>
+                                <font key="titleFont" metaFont="toolTip"/>
                             </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXC-fr-oOt">
+                                <rect key="frame" x="14" y="14" width="16" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="●" id="BUB-nL-cwi">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DQG-v7-6kI">
+                                <rect key="frame" x="34" y="14" width="366" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Extension is currently disabled, enable in Safari preferences" id="0Kd-TV-VyR">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="enableIndicator" destination="LXC-fr-oOt" id="o41-80-zXL"/>
+                        <outlet property="infomationLabel" destination="DQG-v7-6kI" id="Rha-jf-52w"/>
                         <outlet property="radioButton_command" destination="I7P-vE-GrU" id="dwh-nz-AXd"/>
                         <outlet property="radioButton_control" destination="SKH-Np-ydk" id="YSX-pX-YbR"/>
                         <outlet property="radioButton_option" destination="U2I-US-PL3" id="dhX-Mg-KbN"/>

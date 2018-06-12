@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SafariServices
 
 class ViewController: NSViewController, NSWindowDelegate {
 
@@ -14,6 +15,9 @@ class ViewController: NSViewController, NSWindowDelegate {
     @IBOutlet weak var radioButton_control: NSButton!
     @IBOutlet weak var radioButton_option: NSButton!
     @IBOutlet weak var radioButton_command: NSButton!
+
+    @IBOutlet weak var enableIndicator: NSTextField!
+    @IBOutlet weak var infomationLabel: NSTextField!
 
     let keys = ["Shift", "Control", "Alt", "Meta"]
 
@@ -40,10 +44,16 @@ class ViewController: NSViewController, NSWindowDelegate {
         userDefaults = UserDefaults(suiteName: "group.Link-Text-Selector")
     }
 
+
+
     override func viewDidAppear() {
         view.window!.delegate = self
         view.window!.styleMask.remove(.resizable)
         hotKey = userDefaults?.string(forKey: "hotKey") ?? keys.first!
+
+        enableIndicator.layer?.cornerRadius = 8
+
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.checkExtensionState), userInfo: nil, repeats: true)
     }
 
     func windowShouldClose(_ sender: NSWindow) -> Bool {
@@ -54,6 +64,17 @@ class ViewController: NSViewController, NSWindowDelegate {
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
+        }
+    }
+
+    @objc func checkExtensionState() {
+        SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: "com.rayps.Link-Text-Selector.Link-Text-Selector-Extension") { (state, error) in
+            DispatchQueue.main.async {
+                if let status = state?.isEnabled {
+                    self.enableIndicator.textColor = status ? .systemGreen : .systemRed
+                    self.infomationLabel.stringValue = status ? "Enabled" : "Extension is currently disabled, enable in Safari preferences"
+                }
+            }
         }
     }
 
