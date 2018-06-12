@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71B9DD0820CF6ED9009B9E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B9DD0720CF6ED9009B9E3B /* AppDelegate.swift */; };
+		71B9DD0A20CF6ED9009B9E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B9DD0920CF6ED9009B9E3B /* ViewController.swift */; };
+		71B9DD0C20CF6EDB009B9E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B9DD0B20CF6EDB009B9E3B /* Assets.xcassets */; };
+		71B9DD0F20CF6EDB009B9E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B9DD0D20CF6EDB009B9E3B /* Main.storyboard */; };
+		71B9DD1E20CF6F3B009B9E3B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B9DD1D20CF6F3B009B9E3B /* Cocoa.framework */; };
+		71B9DD2120CF6F3B009B9E3B /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B9DD2020CF6F3B009B9E3B /* SafariExtensionHandler.swift */; };
+		71B9DD2320CF6F3B009B9E3B /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B9DD2220CF6F3B009B9E3B /* SafariExtensionViewController.swift */; };
+		71B9DD2620CF6F3B009B9E3B /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B9DD2420CF6F3B009B9E3B /* SafariExtensionViewController.xib */; };
+		71B9DD2920CF6F3B009B9E3B /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 71B9DD2820CF6F3B009B9E3B /* script.js */; };
+		71B9DD2B20CF6F3B009B9E3B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 71B9DD2A20CF6F3B009B9E3B /* ToolbarItemIcon.pdf */; };
+		71B9DD2F20CF6F3B009B9E3B /* Link Text Selector Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 71B9DD1B20CF6F3B009B9E3B /* Link Text Selector Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71B9DD2D20CF6F3B009B9E3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71B9DCFC20CF6ED9009B9E3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71B9DD1A20CF6F3B009B9E3B;
+			remoteInfo = "Link Text Selector Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		71B9DD3320CF6F3B009B9E3B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				71B9DD2F20CF6F3B009B9E3B /* Link Text Selector Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		71B9DD0420CF6ED9009B9E3B /* Link Text Selector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Link Text Selector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71B9DD0720CF6ED9009B9E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		71B9DD0920CF6ED9009B9E3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71B9DD0B20CF6EDB009B9E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71B9DD0E20CF6EDB009B9E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71B9DD1020CF6EDB009B9E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71B9DD1120CF6EDB009B9E3B /* Link_Text_Selector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Link_Text_Selector.entitlements; sourceTree = "<group>"; };
+		71B9DD1B20CF6F3B009B9E3B /* Link Text Selector Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Link Text Selector Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71B9DD1D20CF6F3B009B9E3B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		71B9DD2020CF6F3B009B9E3B /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		71B9DD2220CF6F3B009B9E3B /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		71B9DD2520CF6F3B009B9E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		71B9DD2720CF6F3B009B9E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71B9DD2820CF6F3B009B9E3B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		71B9DD2A20CF6F3B009B9E3B /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		71B9DD2C20CF6F3B009B9E3B /* Link_Text_Selector_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Link_Text_Selector_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71B9DD0120CF6ED9009B9E3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71B9DD1820CF6F3B009B9E3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71B9DD1E20CF6F3B009B9E3B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71B9DCFB20CF6ED9009B9E3B = {
+			isa = PBXGroup;
+			children = (
+				71B9DD0620CF6ED9009B9E3B /* Link Text Selector */,
+				71B9DD1F20CF6F3B009B9E3B /* Link Text Selector Extension */,
+				71B9DD1C20CF6F3B009B9E3B /* Frameworks */,
+				71B9DD0520CF6ED9009B9E3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		71B9DD0520CF6ED9009B9E3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71B9DD0420CF6ED9009B9E3B /* Link Text Selector.app */,
+				71B9DD1B20CF6F3B009B9E3B /* Link Text Selector Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71B9DD0620CF6ED9009B9E3B /* Link Text Selector */ = {
+			isa = PBXGroup;
+			children = (
+				71B9DD0720CF6ED9009B9E3B /* AppDelegate.swift */,
+				71B9DD0920CF6ED9009B9E3B /* ViewController.swift */,
+				71B9DD0B20CF6EDB009B9E3B /* Assets.xcassets */,
+				71B9DD0D20CF6EDB009B9E3B /* Main.storyboard */,
+				71B9DD1020CF6EDB009B9E3B /* Info.plist */,
+				71B9DD1120CF6EDB009B9E3B /* Link_Text_Selector.entitlements */,
+			);
+			path = "Link Text Selector";
+			sourceTree = "<group>";
+		};
+		71B9DD1C20CF6F3B009B9E3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71B9DD1D20CF6F3B009B9E3B /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71B9DD1F20CF6F3B009B9E3B /* Link Text Selector Extension */ = {
+			isa = PBXGroup;
+			children = (
+				71B9DD2020CF6F3B009B9E3B /* SafariExtensionHandler.swift */,
+				71B9DD2220CF6F3B009B9E3B /* SafariExtensionViewController.swift */,
+				71B9DD2420CF6F3B009B9E3B /* SafariExtensionViewController.xib */,
+				71B9DD2720CF6F3B009B9E3B /* Info.plist */,
+				71B9DD2820CF6F3B009B9E3B /* script.js */,
+				71B9DD2A20CF6F3B009B9E3B /* ToolbarItemIcon.pdf */,
+				71B9DD2C20CF6F3B009B9E3B /* Link_Text_Selector_Extension.entitlements */,
+			);
+			path = "Link Text Selector Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71B9DD0320CF6ED9009B9E3B /* Link Text Selector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71B9DD1420CF6EDB009B9E3B /* Build configuration list for PBXNativeTarget "Link Text Selector" */;
+			buildPhases = (
+				71B9DD0020CF6ED9009B9E3B /* Sources */,
+				71B9DD0120CF6ED9009B9E3B /* Frameworks */,
+				71B9DD0220CF6ED9009B9E3B /* Resources */,
+				71B9DD3320CF6F3B009B9E3B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71B9DD2E20CF6F3B009B9E3B /* PBXTargetDependency */,
+			);
+			name = "Link Text Selector";
+			productName = "Link Text Selector";
+			productReference = 71B9DD0420CF6ED9009B9E3B /* Link Text Selector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		71B9DD1A20CF6F3B009B9E3B /* Link Text Selector Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71B9DD3020CF6F3B009B9E3B /* Build configuration list for PBXNativeTarget "Link Text Selector Extension" */;
+			buildPhases = (
+				71B9DD1720CF6F3B009B9E3B /* Sources */,
+				71B9DD1820CF6F3B009B9E3B /* Frameworks */,
+				71B9DD1920CF6F3B009B9E3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Link Text Selector Extension";
+			productName = "Link Text Selector Extension";
+			productReference = 71B9DD1B20CF6F3B009B9E3B /* Link Text Selector Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71B9DCFC20CF6ED9009B9E3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Ray;
+				TargetAttributes = {
+					71B9DD0320CF6ED9009B9E3B = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					71B9DD1A20CF6F3B009B9E3B = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = 71B9DCFF20CF6ED9009B9E3B /* Build configuration list for PBXProject "Link Text Selector" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71B9DCFB20CF6ED9009B9E3B;
+			productRefGroup = 71B9DD0520CF6ED9009B9E3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71B9DD0320CF6ED9009B9E3B /* Link Text Selector */,
+				71B9DD1A20CF6F3B009B9E3B /* Link Text Selector Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71B9DD0220CF6ED9009B9E3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71B9DD0C20CF6EDB009B9E3B /* Assets.xcassets in Resources */,
+				71B9DD0F20CF6EDB009B9E3B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71B9DD1920CF6F3B009B9E3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71B9DD2B20CF6F3B009B9E3B /* ToolbarItemIcon.pdf in Resources */,
+				71B9DD2620CF6F3B009B9E3B /* SafariExtensionViewController.xib in Resources */,
+				71B9DD2920CF6F3B009B9E3B /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71B9DD0020CF6ED9009B9E3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71B9DD0A20CF6ED9009B9E3B /* ViewController.swift in Sources */,
+				71B9DD0820CF6ED9009B9E3B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71B9DD1720CF6F3B009B9E3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71B9DD2320CF6F3B009B9E3B /* SafariExtensionViewController.swift in Sources */,
+				71B9DD2120CF6F3B009B9E3B /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71B9DD2E20CF6F3B009B9E3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71B9DD1A20CF6F3B009B9E3B /* Link Text Selector Extension */;
+			targetProxy = 71B9DD2D20CF6F3B009B9E3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		71B9DD0D20CF6EDB009B9E3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71B9DD0E20CF6EDB009B9E3B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		71B9DD2420CF6F3B009B9E3B /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71B9DD2520CF6F3B009B9E3B /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71B9DD1220CF6EDB009B9E3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		71B9DD1320CF6EDB009B9E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		71B9DD1520CF6EDB009B9E3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Link Text Selector/Link_Text_Selector.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MGAF98TG33;
+				INFOPLIST_FILE = "Link Text Selector/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Link-Text-Selector";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		71B9DD1620CF6EDB009B9E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Link Text Selector/Link_Text_Selector.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MGAF98TG33;
+				INFOPLIST_FILE = "Link Text Selector/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Link-Text-Selector";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		71B9DD3120CF6F3B009B9E3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Link Text Selector Extension/Link_Text_Selector_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGAF98TG33;
+				INFOPLIST_FILE = "Link Text Selector Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Link-Text-Selector.Link-Text-Selector-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		71B9DD3220CF6F3B009B9E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Link Text Selector Extension/Link_Text_Selector_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGAF98TG33;
+				INFOPLIST_FILE = "Link Text Selector Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rayps.Link-Text-Selector.Link-Text-Selector-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71B9DCFF20CF6ED9009B9E3B /* Build configuration list for PBXProject "Link Text Selector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71B9DD1220CF6EDB009B9E3B /* Debug */,
+				71B9DD1320CF6EDB009B9E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71B9DD1420CF6EDB009B9E3B /* Build configuration list for PBXNativeTarget "Link Text Selector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71B9DD1520CF6EDB009B9E3B /* Debug */,
+				71B9DD1620CF6EDB009B9E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71B9DD3020CF6F3B009B9E3B /* Build configuration list for PBXNativeTarget "Link Text Selector Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71B9DD3120CF6F3B009B9E3B /* Debug */,
+				71B9DD3220CF6F3B009B9E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71B9DCFC20CF6ED9009B9E3B /* Project object */;
+}
