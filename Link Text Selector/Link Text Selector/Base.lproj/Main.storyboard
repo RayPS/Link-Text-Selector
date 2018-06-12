@@ -57,14 +57,35 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Help" id="wpr-3q-Mcd">
+                            <menuItem title="Menu" id="wpr-3q-Mcd">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
+                            </menuItem>
+                            <menuItem title="Menu" id="7j6-8W-2XO">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Menu" systemMenu="help" id="H05-pj-b2T">
                                     <items>
-                                        <menuItem title="About Link Text Selector" id="FKE-Sm-Kum">
+                                        <menuItem title="Website" id="Hmf-DL-oyJ">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="aboutMenuItemClicked:" target="Voe-Tx-rLC" id="k2G-X1-5RR"/>
+                                                <action selector="websiteMenuItemClicked:" target="Voe-Tx-rLC" id="e6u-PS-ZqP"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Author" id="pFd-dr-av1">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="authorMenuItemClicked:" target="Voe-Tx-rLC" id="CWT-z3-3nc"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Source Code" id="Xzn-Jq-P3W">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="sourceCodeMenuItemClicked:" target="Voe-Tx-rLC" id="spD-Ra-D0F"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="PqH-uM-ZSc"/>
+                                        <menuItem title="Close" keyEquivalent="w" id="PaK-Ps-gkD">
+                                            <connections>
+                                                <action selector="closeMenuItemClicked:" target="Voe-Tx-rLC" id="d8h-NK-5yt"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -77,7 +98,6 @@
                     </connections>
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Link_Text_Selector" customModuleProvider="target"/>
-                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>

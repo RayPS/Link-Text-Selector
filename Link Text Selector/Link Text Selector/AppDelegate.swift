@@ -11,12 +11,24 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBAction func aboutMenuItemClicked(_ sender: Any) {
+    @IBAction func websiteMenuItemClicked(_ sender: Any) {
         if let url = URL(string: "http://lab.rayps.com/lts"), NSWorkspace.shared.open(url) {
-            print("default browser was successfully opened")
         }
     }
 
+    @IBAction func authorMenuItemClicked(_ sender: Any) {
+        if let url = URL(string: "http://rayps.com"), NSWorkspace.shared.open(url) {
+        }
+    }
+
+    @IBAction func sourceCodeMenuItemClicked(_ sender: Any) {
+        if let url = URL(string: "https://github.com/RayPS/Link-Text-Selector/"), NSWorkspace.shared.open(url) {
+        }
+    }
+
+    @IBAction func closeMenuItemClicked(_ sender: Any) {
+        NSApplication.shared.terminate(self)
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
