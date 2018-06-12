@@ -3,11 +3,12 @@
 # Link Text Selector
 A Safari Extension to let you select text from a link easier
 
-#### Download
-Download  from [Mac App Store]() (Recommended)
+#### Download:
+[<img src="mas_button.svg" height="40px">]()
 
 Or [.safariextz](https://github.com/RayPS/Link-Text-Selector/blob/master/LinkTextSelector.safariextz?raw=true) (Legacy support for older macOS)
 
+#### Teaser:
 ![](image.png)
 
 #### See in action:
