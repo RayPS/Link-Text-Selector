@@ -120,6 +120,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="BTw-Zj-o5V"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SKH-Np-ydk">
                                         <rect key="frame" x="-1" y="47" width="81" height="18"/>
@@ -127,6 +130,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="laX-Wb-aRa"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U2I-US-PL3">
                                         <rect key="frame" x="-1" y="23" width="110" height="18"/>
@@ -134,6 +140,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="yeR-8k-2bE"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I7P-vE-GrU">
                                         <rect key="frame" x="-1" y="-1" width="101" height="18"/>
@@ -141,6 +150,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="n82-87-A5X"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <visibilityPriorities>

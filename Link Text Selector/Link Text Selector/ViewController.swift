@@ -33,5 +33,9 @@ class ViewController: NSViewController, NSWindowDelegate {
     }
 
 
+
+    @IBAction func hotKeyRadioButtonSelected(_ sender: Any) {
+
+    }
 }
 
