@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     safari.self.addEventListener('message', function (Event) {
         if (Event.name == 'answerForHotKey') {
-            hotKey = Event.message || 'Shift';
+            hotKey = Event.message.hotKey || 'Shift';
         }
     }, false);
     
