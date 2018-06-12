@@ -1,19 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(event) {
-    safari.extension.dispatchMessage('Document Loaded!');
+    // safari.extension.dispatchMessage('Document Loaded!');
 
     var hotKey = 'Shift';
 
-    // safari.extension.dispatchMessage('askForHotKey');
+    safari.extension.dispatchMessage('askForHotKey');
 
-    // safari.self.addEventListener('message', function (Event) {
-    //     if (Event.name == 'answerForHotKey') {
-    //         hotKey = Event.message || 'Shift';
-    //     }
-    //     if (Event.name == 'changedForHotKey') {
-    //         // hotKey = Event.message;
-    //         // console.log('hotkey changed to ' + hotKey);
-    //     }
-    // }, false);
+    safari.self.addEventListener('message', function (Event) {
+        if (Event.name == 'answerForHotKey') {
+            hotKey = Event.message || 'Shift';
+        }
+    }, false);
     
     document.addEventListener('keyup', (event) => {
         if (event.key == hotKey) {
