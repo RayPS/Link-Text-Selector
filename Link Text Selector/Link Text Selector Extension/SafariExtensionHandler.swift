@@ -9,15 +9,17 @@
 import SafariServices
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
+
+    
     
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
-        // This method will be called when a content script provided by your extension calls safari.extension.dispatchMessage("message").
         page.getPropertiesWithCompletionHandler { properties in
 //            NSLog("The extension received a message (\(messageName)) from a script injected into (\(String(describing: properties?.url))) with userInfo (\(userInfo ?? [:]))")
-
-            NSLog(messageName)
-
-//            page.dispatchMessageToScript(withName: "simpleMessage", userInfo: nil)
+            if messageName == "askForHotKey" {
+                let userDefaults = UserDefaults(suiteName: "group.Link-Text-Selector")
+                let hotKey = userDefaults?.string(forKey: "hotKey") ?? "Shift"
+                page.dispatchMessageToScript(withName: "answerForHotKey", userInfo: ["hotKey": hotKey])
+            }
         }
 
 
