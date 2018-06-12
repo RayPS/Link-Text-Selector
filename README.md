@@ -1,10 +1,12 @@
-#### Link Text Selector
+![](Link\ Text\ Selector/Link\ Text\ Selector/Assets.xcassets/AppIcon.appiconset/icon128pt@2x.png)
 
-Safari Extension: Select text from hyperlinks.
+# Link Text Selector
+A Safari Extension to let you select text from a link easier
 
-Default hot key: `Shift` key. Change in settings.
+#### Download
+Download  from [Mac App Store]() (Recommended)
 
-Download from the latest [Release](../../releases) or [(in review...)](#)
+Or [.safariextz](https://github.com/RayPS/Link-Text-Selector/blob/master/LinkTextSelector.safariextz?raw=true) (Legacy support for older macOS)
 
 ![](image.png)
 
@@ -12,6 +14,14 @@ Download from the latest [Release](../../releases) or [(in review...)](#)
 ![](preview.gif)
 
 
+#### Settings:
+
+![](settings.png)
+
+
 #### Tip:
 - Double click to select a word
 - Tripple click to select a paragraph
+
+#### Donate:
+I don't drink coffee that much, but if you like to support you can [send me money](https://www.paypal.me/rayps), i'll be appreciated.
