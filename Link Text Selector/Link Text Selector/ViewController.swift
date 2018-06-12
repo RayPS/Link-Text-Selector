@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSWindowDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,13 @@ class ViewController: NSViewController {
     }
 
     override func viewDidAppear() {
+        view.window!.delegate = self
         view.window!.styleMask.remove(.resizable)
+    }
+
+    func windowShouldClose(_ sender: NSWindow) -> Bool {
+        NSApplication.shared.terminate(self)
+        return true
     }
 
     override var representedObject: Any? {
