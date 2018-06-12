@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -88,7 +89,7 @@
                     <window key="window" title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="220"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
@@ -107,76 +108,99 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Link_Text_Selector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="220"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEC-8X-Ccv">
-                                <rect key="frame" x="234" y="91" width="107" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rhG-yV-rfG">
-                                        <rect key="frame" x="-1" y="71" width="67" height="18"/>
-                                        <buttonCell key="cell" type="radio" title="⇧ Shift" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="b83-9p-sNJ">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="BTw-Zj-o5V"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SKH-Np-ydk">
-                                        <rect key="frame" x="-1" y="47" width="81" height="18"/>
-                                        <buttonCell key="cell" type="radio" title="⌃ Control" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="R72-6R-P3x">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="laX-Wb-aRa"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U2I-US-PL3">
-                                        <rect key="frame" x="-1" y="23" width="110" height="18"/>
-                                        <buttonCell key="cell" type="radio" title="⌥ Option (Alt)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="aV3-cX-trZ">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="yeR-8k-2bE"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I7P-vE-GrU">
-                                        <rect key="frame" x="-1" y="-1" width="101" height="18"/>
-                                        <buttonCell key="cell" type="radio" title="⌘ Command" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1DZ-hq-I0G">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="n82-87-A5X"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JGI-vg-QZW">
-                                <rect key="frame" x="172" y="162" width="56" height="18"/>
+                            <box fixedFrame="YES" title="Hot Key" translatesAutoresizingMaskIntoConstraints="NO" id="iHy-Qc-Tk3">
+                                <rect key="frame" x="263" y="29" width="200" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Hot Key:" id="nbO-yS-KOu">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                                <view key="contentView" id="g9h-Gu-3cd">
+                                    <rect key="frame" x="2" y="2" width="196" height="154"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEC-8X-Ccv">
+                                            <rect key="frame" x="20" y="20" width="107" height="112"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rhG-yV-rfG">
+                                                    <rect key="frame" x="-1" y="95" width="67" height="18"/>
+                                                    <buttonCell key="cell" type="radio" title="⇧ Shift" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="b83-9p-sNJ">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="BTw-Zj-o5V"/>
+                                                    </connections>
+                                                </button>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SKH-Np-ydk">
+                                                    <rect key="frame" x="-1" y="63" width="81" height="18"/>
+                                                    <buttonCell key="cell" type="radio" title="⌃ Control" bezelStyle="regularSquare" imagePosition="left" alignment="left" tag="1" inset="2" id="R72-6R-P3x">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="laX-Wb-aRa"/>
+                                                    </connections>
+                                                </button>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U2I-US-PL3">
+                                                    <rect key="frame" x="-1" y="31" width="110" height="18"/>
+                                                    <buttonCell key="cell" type="radio" title="⌥ Option (Alt)" bezelStyle="regularSquare" imagePosition="left" alignment="left" tag="2" inset="2" id="aV3-cX-trZ">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="yeR-8k-2bE"/>
+                                                    </connections>
+                                                </button>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I7P-vE-GrU">
+                                                    <rect key="frame" x="-1" y="-1" width="101" height="18"/>
+                                                    <buttonCell key="cell" type="radio" title="⌘ Command" bezelStyle="regularSquare" imagePosition="left" alignment="left" tag="3" inset="2" id="1DZ-hq-I0G">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="hotKeyRadioButtonSelected:" target="XfG-lQ-9wD" id="n82-87-A5X"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <visibilityPriorities>
+                                                <integer value="1000"/>
+                                                <integer value="1000"/>
+                                                <integer value="1000"/>
+                                                <integer value="1000"/>
+                                            </visibilityPriorities>
+                                            <customSpacing>
+                                                <real value="3.4028234663852886e+38"/>
+                                                <real value="3.4028234663852886e+38"/>
+                                                <real value="3.4028234663852886e+38"/>
+                                                <real value="3.4028234663852886e+38"/>
+                                            </customSpacing>
+                                        </stackView>
+                                    </subviews>
+                                </view>
+                            </box>
+                            <box fixedFrame="YES" title="Usage" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-Xy-wWf">
+                                <rect key="frame" x="17" y="29" width="244" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="CbQ-KE-3IJ">
+                                    <rect key="frame" x="2" y="2" width="240" height="154"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aud-kW-Xa3">
+                                            <rect key="frame" x="18" y="20" width="204" height="114"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="0CT-na-LPD">
+                                                <font key="font" metaFont="system"/>
+                                                <string key="title">Hover the cursor on a link then press the hot key.
+
+If you changed the hot key setting you need to refresh web pages to take affects.</string>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                            </box>
                         </subviews>
                     </view>
                 </viewController>
