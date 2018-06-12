@@ -10,6 +10,10 @@ import Cocoa
 
 class ViewController: NSViewController, NSWindowDelegate {
 
+    @IBOutlet weak var radioButton_shift: NSButton!
+    @IBOutlet weak var radioButton_control: NSButton!
+    @IBOutlet weak var radioButton_option: NSButton!
+    @IBOutlet weak var radioButton_command: NSButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 

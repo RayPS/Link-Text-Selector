@@ -203,6 +203,12 @@ If you changed the hot key setting you need to refresh web pages to take affects
                             </box>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="radioButton_command" destination="I7P-vE-GrU" id="dwh-nz-AXd"/>
+                        <outlet property="radioButton_control" destination="SKH-Np-ydk" id="YSX-pX-YbR"/>
+                        <outlet property="radioButton_option" destination="U2I-US-PL3" id="dhX-Mg-KbN"/>
+                        <outlet property="radioButton_shift" destination="rhG-yV-rfG" id="CLM-XM-DdC"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
