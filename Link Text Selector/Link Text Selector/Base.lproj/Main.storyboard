@@ -198,7 +198,6 @@
                                         </stackView>
                                     </subviews>
                                 </view>
-                                <font key="titleFont" metaFont="toolTip"/>
                             </box>
                             <box fixedFrame="YES" title="Usage" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-Xy-wWf">
                                 <rect key="frame" x="13" y="43" width="251" height="161"/>
@@ -221,7 +220,6 @@ If you changed the hot key setting you need to refresh web pages to take affects
                                         </textField>
                                     </subviews>
                                 </view>
-                                <font key="titleFont" metaFont="toolTip"/>
                             </box>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXC-fr-oOt">
                                 <rect key="frame" x="14" y="14" width="16" height="17"/>
@@ -241,9 +239,21 @@ If you changed the hot key setting you need to refresh web pages to take affects
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-gO-TGc">
+                                <rect key="frame" x="414" y="12" width="50" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="inline" title="Enable" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="bGH-yT-KCK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystemBold"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="enableButtonClicked:" target="XfG-lQ-9wD" id="ICc-kI-UvM"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="enableButton" destination="xjA-gO-TGc" id="0vd-iy-oCN"/>
                         <outlet property="enableIndicator" destination="LXC-fr-oOt" id="o41-80-zXL"/>
                         <outlet property="infomationLabel" destination="DQG-v7-6kI" id="Rha-jf-52w"/>
                         <outlet property="radioButton_command" destination="I7P-vE-GrU" id="dwh-nz-AXd"/>
