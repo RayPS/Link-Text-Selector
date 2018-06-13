@@ -1,10 +1,13 @@
 ![](Link%20Text%20Selector/Link%20Text%20Selector/Assets.xcassets/AppIcon.appiconset/icon128pt@2x.png?raw=true)
 
 # Link Text Selector
-A Safari Extension to let you select text from a link easier
+A Safari Extension to let you select text from a link easier.
+
+Did you ever get thwarted while trying to select some text from a link?
+With this Safari Extension, you hover your mouse cursor on a link then press a hot key, the link will turn into a selectable field. This will let you be able to do that, copy a text, lookup a word, speech a paragraph or whatever you want.
 
 #### Download:
-[<img src="mas_button.svg" height="40px">]()
+[<img src="mas_button.svg" height="40px">](https://itunes.apple.com/us/app/link-text-selector/id1398143805?ls=1&mt=12)
 
 Or [.safariextz](https://github.com/RayPS/Link-Text-Selector/blob/master/LinkTextSelector.safariextz?raw=true) (Legacy support for older macOS)
 
