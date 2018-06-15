@@ -1,4 +1,4 @@
-![](Link%20Text%20Selector/Link%20Text%20Selector/Assets.xcassets/AppIcon.appiconset/icon128pt@2x.png?raw=true)
+![](mas-appicon.png)
 
 # Link Text Selector
 A Safari Extension to let you select text from a link easier.
